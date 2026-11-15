@@ -1,0 +1,25 @@
+title: BL Monitor and Control AB
+description: Monitoring and control solutions for complex equipment.
+
+url: "https://www.bl-mc.com"
+baseurl: ""
+
+markdown: kramdown
+
+collections:
+  products:
+    output: true
+    permalink: /products/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: products
+    values:
+      layout: product
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

@@ -1,0 +1,38 @@
+---
+layout: default
+title: Instrumentation hardware
+description: Wireless instrumentation for the Blinky-Lite control platform.
+permalink: /products/
+---
+
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">Blinky-Lite Instrumentation</p>
+    <h1>Instrumentation for distributed equipment</h1>
+
+    <p class="lead">
+      Explore purpose-built wireless devices designed to integrate
+      with Blinky-Lite. Email us to discuss your application,
+      availability and pricing.
+    </p>
+
+    <div class="cards">
+      {% assign products = site.products | sort: "title" %}
+      {% for product in products %}
+      <article class="card">
+        <h2 class="card-title">
+          <a href="{{ product.url | relative_url }}">
+            {{ product.title | escape }}
+          </a>
+        </h2>
+
+        <p>{{ product.description | escape }}</p>
+
+        <a class="text-link" href="{{ product.url | relative_url }}">
+          View device →
+        </a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

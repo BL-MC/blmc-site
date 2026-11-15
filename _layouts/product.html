@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<section class="section">
+  <div class="container product-page">
+    <p>
+      <a href="{{ '/products/' | relative_url }}">← All hardware</a>
+    </p>
+
+    <p class="eyebrow">Blinky-Lite Instrumentation</p>
+    <h1>{{ page.title | escape }}</h1>
+    <p class="lead">{{ page.description | escape }}</p>
+
+    {% assign email_subject = page.title | prepend: 'Hardware enquiry: ' | url_encode %}
+
+    <div class="actions">
+      <a class="button"
+         href="mailto:info@bl-mc.se?subject={{ email_subject }}">
+        Email us about this device
+      </a>
+
+      {% if page.repository %}
+      <a class="button button-secondary"
+         href="{{ page.repository | escape }}">
+         View source repository
+      </a>
+      {% endif %}
+      
+    </div>
+
+    {% if page.specifications %}
+    <h2>Specifications</h2>
+    <dl class="specifications">
+      {% for spec in page.specifications %}
+      <div>
+        <dt>{{ spec.name | escape }}</dt>
+        <dd>{{ spec.value | escape }}</dd>
+      </div>
+      {% endfor %}
+    </dl>
+    {% endif %}
+
+    <div class="product-content">
+      {{ content }}
+    </div>
+
+    <div class="notice">
+      <strong>Planning an installation?</strong>
+      Confirm specifications, operating limits and suitability for your
+      application with us before ordering or relying on a device for
+      protection functions.
+    </div>
+  </div>
+</section>
