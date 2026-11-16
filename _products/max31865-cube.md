@@ -1,8 +1,10 @@
 ---
 title: Four-terminal resistance thermometry
+card-order: 7
 description: A wireless, two-channel, precision four-terminal resistance measurement for accurate temperature sensing.
 product-code: max31865-cube
 #repository: https://github.com/bl-instr/MAX31865-cube
+specifications_in_content: true
 specifications:
   - name: Primary function
     value: Precision four-terminal resistance thermometry and temperature characterisation
@@ -41,11 +43,6 @@ specifications:
 
 ---
 
-
-| Enclosure | PCB |
-|-----------|-----|
-|<img src="/assets/images/products/max31865-cube/MAX31865-cube.png" alt="MAX31865-cube" width="400"/>|<img src="/assets/images/products/max31865-cube/MAX31865PCB.png" alt="MAX31865PCB" width="400"/>|
-
 ## Overview
 
 The MAX31865 Cube is a compact, wireless instrumentation module in the Blinky-Lite Instrumentation Platform. It is designed to perform two precision four-terminal resistance measurements for temperature sensing, then communicate resistance and calculated temperature data to a central Blinky-Lite control system.
@@ -55,6 +52,10 @@ Four-terminal measurement removes the effect of lead resistance, which is necess
 For accurate temperature conversion across a wide operating range, each channel evaluates a seventh-order polynomial fit. Blinky-Lite downloads the coefficients to the cube and supports log-log, linear-linear, log-linear, and linear-log fitting modes.
 
 Built around the Raspberry Pi Pico W / RP2040, the module uses 2.4 GHz Wi-Fi and MQTT publish/subscribe communication. This event-driven approach supports distributed deployments without wired data connections and enables Blinky-Lite to use device information for recording, notifications, visualisation, and machine-protection workflows.
+
+| Enclosure | PCB |
+|-----------|-----|
+|<img src="/assets/images/products/max31865-cube/MAX31865-cube.png" alt="MAX31865-cube" width="400"/>|<img src="/assets/images/products/max31865-cube/MAX31865PCB.png" alt="MAX31865PCB" width="400"/>|
 
 ### Key features
 
@@ -77,8 +78,9 @@ Built around the Raspberry Pi Pico W / RP2040, the module uses 2.4 GHz Wi-Fi and
 - Distributed precision-sensor installations requiring central visibility
 - Long-duration measurements where limiting sensor self-heating is important
 
-## Getting started
+{% include product-specifications.html %}
 
+## Getting started
 
 ### Hardware
 

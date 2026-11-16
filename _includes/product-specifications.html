@@ -1,0 +1,15 @@
+{% if page.specifications %}
+<h3>Specifications</h3>
+<dl class="specifications">
+  <div>
+    <dt>Product Code</dt>
+    <dd>{{ page.product-code | escape }}</dd>
+  </div>
+  {% for spec in page.specifications %}
+  <div>
+    <dt>{{ spec.name | escape }}</dt>
+    <dd>{{ spec.value | escape }}</dd>
+  </div>
+  {% endfor %}
+</dl>
+{% endif %}

@@ -29,21 +29,9 @@ layout: default
       
     </div>
 
-    {% if page.specifications %}
-    <h2>Specifications</h2>
-    <dl class="specifications">
-      <div>
-        <dt>Product Code</dt>
-        <dd>{{ page.product-code | escape }}</dd>
-      </div>
-      {% for spec in page.specifications %}
-      <div>
-        <dt>{{ spec.name | escape }}</dt>
-        <dd>{{ spec.value | escape }}</dd>
-      </div>
-      {% endfor %}
-    </dl>
-    {% endif %}
+  {% unless page.specifications_in_content %}
+    {% include product-specifications.html %}
+  {% endunless %}
 
     <div class="product-content">
       {{ content }}

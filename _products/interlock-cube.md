@@ -1,8 +1,10 @@
 ---
 title: Interlock and digital-status monitoring
+card-order: 4
 description: A wireless, three-channel, configurable interlock monitoring for reporting switch closures and digital safety states.
 product-code: interlock-cube
 #repository: https://github.com/bl-instr/interlock-cube
+specifications_in_content: true
 specifications:
   - name: Primary function
     value: Interlock and digital-status monitoring
@@ -37,10 +39,6 @@ specifications:
 
 ---
 
-| Enclosure | PCB |
-|-----------|-----|
-|<img src="/assets/images/products/interlock-cube/interlock-cube.png" alt="interlock-cube" width="400"/>|<img src="/assets/images/products/interlock-cube/interlockPCB.png" alt="interlockPCB" width="400"/>
-
 ## Overview
 
 The Interlock Cube is a compact, wireless instrumentation module in the Blinky-Lite Instrumentation Platform. It is designed to report the status of interlocks and digital sensors near the equipment being monitored, then communicate states and alarms to a central Blinky-Lite control system.
@@ -48,6 +46,10 @@ The Interlock Cube is a compact, wireless instrumentation module in the Blinky-L
 Typical inputs include door switches, limit switches, motion detectors, bimetallic temperature switches, and other dry-contact or compatible digital status signals. Each of the three channels provides independently configurable source, input termination, and active-logic settings so the device can adapt to a wide range of field wiring and sensor arrangements.
 
 Built around the Raspberry Pi Pico W / RP2040, the module uses 2.4 GHz Wi-Fi and MQTT publish/subscribe communication. This event-driven approach supports distributed deployments without wired data connections and enables Blinky-Lite to use device information for recording, notifications, visualisation, and machine-protection or interlock workflows.
+
+| Enclosure | PCB |
+|-----------|-----|
+|<img src="/assets/images/products/interlock-cube/interlock-cube.png" alt="interlock-cube" width="400"/>|<img src="/assets/images/products/interlock-cube/interlockPCB.png" alt="interlockPCB" width="400"/>
 
 ### Key features
 
@@ -68,8 +70,9 @@ Built around the Raspberry Pi Pico W / RP2040, the module uses 2.4 GHz Wi-Fi and
 - Bimetallic temperature-switch monitoring
 - Machine-protection and safety-workflow status inputs
 
-## Getting started
+{% include product-specifications.html %}
 
+## Getting started
 
 ### Hardware
 

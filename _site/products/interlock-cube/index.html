@@ -25,8 +25,14 @@
       <a class="brand" href="/">
         BL Monitor and Control AB
       </a>
-
-      <nav class="nav-links" aria-label="Main navigation">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-navigation">
+        <span aria-hidden="true">☰</span> Menu
+      </button>
+      <nav id="main-navigation" class="nav-links" aria-label="Main navigation">
         <a href="/">Home</a>
         <a href="/blinky-lite/">Blinky-Lite</a>
         <a href="/products/">Instrumentation</a>
@@ -59,94 +65,18 @@
       
     </div>
 
-    
-    <h2>Specifications</h2>
-    <dl class="specifications">
-      <div>
-        <dt>Product Code</dt>
-        <dd>interlock-cube</dd>
-      </div>
-      
-      <div>
-        <dt>Primary function</dt>
-        <dd>Interlock and digital-status monitoring</dd>
-      </div>
-      
-      <div>
-        <dt>Sensor / interface</dt>
-        <dd>Switch closures and compatible digital sensors, including door switches, limit switches, motion detectors, and bimetallic temperature switches</dd>
-      </div>
-      
-      <div>
-        <dt>Channels</dt>
-        <dd>Three independently configurable interlock channels</dd>
-      </div>
-      
-      <div>
-        <dt>Channel source</dt>
-        <dd>ne independently switched 3.3 V source pin per channel</dd>
-      </div>
-      
-      <div>
-        <dt>Digital read input</dt>
-        <dd>One 3.3 V digital read pin per channel</dd>
-      </div>
-      
-      <div>
-        <dt>Input termination</dt>
-        <dd>Remotely configurable pull-up, pull-down, or floating termination per channel</dd>
-      </div>
-      
-      <div>
-        <dt>Logic configuration</dt>
-        <dd>Remotely configurable active-high or active-low logic per channel</dd>
-      </div>
-      
-      <div>
-        <dt>Inputs / outputs</dt>
-        <dd>5 mm screw terminals for field wiring, sensor connections, and 5 V power</dd>
-      </div>
-      
-      <div>
-        <dt>Power input</dt>
-        <dd>5 V DC via 5 mm screw terminals</dd>
-      </div>
-      
-      <div>
-        <dt>Wireless</dt>
-        <dd>2.4 GHz Wi-Fi</dd>
-      </div>
-      
-      <div>
-        <dt>Communication</dt>
-        <dd>MQTT publish/subscribe protocol</dd>
-      </div>
-      
-      <div>
-        <dt>Controller</dt>
-        <dd>Raspberry Pi Pico W / RP2040</dd>
-      </div>
-      
-      <div>
-        <dt>PCB dimensions</dt>
-        <dd>50 mm × 87 mm</dd>
-      </div>
-      
-      <div>
-        <dt>Enclosure and mounting</dt>
-        <dd>55 mm × 93 mm × 26 mm; DIN Mod3-compatible enclosure with removable DIN-rail mount</dd>
-      </div>
-      
-      <div>
-        <dt>Platform</dt>
-        <dd>Blinky-Lite Instrumentation Platform</dd>
-      </div>
-      
-    </dl>
-    
+  
 
     <div class="product-content">
-      <table>
+      <h2 id="overview">Overview</h2>
+
+<p>The Interlock Cube is a compact, wireless instrumentation module in the Blinky-Lite Instrumentation Platform. It is designed to report the status of interlocks and digital sensors near the equipment being monitored, then communicate states and alarms to a central Blinky-Lite control system.</p>
+
+<p>Typical inputs include door switches, limit switches, motion detectors, bimetallic temperature switches, and other dry-contact or compatible digital status signals. Each of the three channels provides independently configurable source, input termination, and active-logic settings so the device can adapt to a wide range of field wiring and sensor arrangements.</p>
+
+<p>Built around the Raspberry Pi Pico W / RP2040, the module uses 2.4 GHz Wi-Fi and MQTT publish/subscribe communication. This event-driven approach supports distributed deployments without wired data connections and enables Blinky-Lite to use device information for recording, notifications, visualisation, and machine-protection or interlock workflows.</p>
+
+<table>
   <thead>
     <tr>
       <th>Enclosure</th>
@@ -160,14 +90,6 @@
     </tr>
   </tbody>
 </table>
-
-<h2 id="overview">Overview</h2>
-
-<p>The Interlock Cube is a compact, wireless instrumentation module in the Blinky-Lite Instrumentation Platform. It is designed to report the status of interlocks and digital sensors near the equipment being monitored, then communicate states and alarms to a central Blinky-Lite control system.</p>
-
-<p>Typical inputs include door switches, limit switches, motion detectors, bimetallic temperature switches, and other dry-contact or compatible digital status signals. Each of the three channels provides independently configurable source, input termination, and active-logic settings so the device can adapt to a wide range of field wiring and sensor arrangements.</p>
-
-<p>Built around the Raspberry Pi Pico W / RP2040, the module uses 2.4 GHz Wi-Fi and MQTT publish/subscribe communication. This event-driven approach supports distributed deployments without wired data connections and enables Blinky-Lite to use device information for recording, notifications, visualisation, and machine-protection or interlock workflows.</p>
 
 <h3 id="key-features">Key features</h3>
 
@@ -191,6 +113,90 @@
   <li>Bimetallic temperature-switch monitoring</li>
   <li>Machine-protection and safety-workflow status inputs</li>
 </ul>
+
+<h3>Specifications</h3>
+<dl class="specifications">
+  <div>
+    <dt>Product Code</dt>
+    <dd>interlock-cube</dd>
+  </div>
+  
+  <div>
+    <dt>Primary function</dt>
+    <dd>Interlock and digital-status monitoring</dd>
+  </div>
+  
+  <div>
+    <dt>Sensor / interface</dt>
+    <dd>Switch closures and compatible digital sensors, including door switches, limit switches, motion detectors, and bimetallic temperature switches</dd>
+  </div>
+  
+  <div>
+    <dt>Channels</dt>
+    <dd>Three independently configurable interlock channels</dd>
+  </div>
+  
+  <div>
+    <dt>Channel source</dt>
+    <dd>ne independently switched 3.3 V source pin per channel</dd>
+  </div>
+  
+  <div>
+    <dt>Digital read input</dt>
+    <dd>One 3.3 V digital read pin per channel</dd>
+  </div>
+  
+  <div>
+    <dt>Input termination</dt>
+    <dd>Remotely configurable pull-up, pull-down, or floating termination per channel</dd>
+  </div>
+  
+  <div>
+    <dt>Logic configuration</dt>
+    <dd>Remotely configurable active-high or active-low logic per channel</dd>
+  </div>
+  
+  <div>
+    <dt>Inputs / outputs</dt>
+    <dd>5 mm screw terminals for field wiring, sensor connections, and 5 V power</dd>
+  </div>
+  
+  <div>
+    <dt>Power input</dt>
+    <dd>5 V DC via 5 mm screw terminals</dd>
+  </div>
+  
+  <div>
+    <dt>Wireless</dt>
+    <dd>2.4 GHz Wi-Fi</dd>
+  </div>
+  
+  <div>
+    <dt>Communication</dt>
+    <dd>MQTT publish/subscribe protocol</dd>
+  </div>
+  
+  <div>
+    <dt>Controller</dt>
+    <dd>Raspberry Pi Pico W / RP2040</dd>
+  </div>
+  
+  <div>
+    <dt>PCB dimensions</dt>
+    <dd>50 mm × 87 mm</dd>
+  </div>
+  
+  <div>
+    <dt>Enclosure and mounting</dt>
+    <dd>55 mm × 93 mm × 26 mm; DIN Mod3-compatible enclosure with removable DIN-rail mount</dd>
+  </div>
+  
+  <div>
+    <dt>Platform</dt>
+    <dd>Blinky-Lite Instrumentation Platform</dd>
+  </div>
+  
+</dl>
 
 <h2 id="getting-started">Getting started</h2>
 
@@ -300,5 +306,6 @@
   </div>
 </dialog>
   <script src="/assets/js/video-modal.js" defer></script>
+  <script src="/assets/js/mobile-menu.js" defer></script>
 </body>
 </html>

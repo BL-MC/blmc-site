@@ -25,8 +25,14 @@
       <a class="brand" href="/">
         BL Monitor and Control AB
       </a>
-
-      <nav class="nav-links" aria-label="Main navigation">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-navigation">
+        <span aria-hidden="true">☰</span> Menu
+      </button>
+      <nav id="main-navigation" class="nav-links" aria-label="Main navigation">
         <a href="/">Home</a>
         <a href="/blinky-lite/">Blinky-Lite</a>
         <a href="/products/">Instrumentation</a>
@@ -59,94 +65,16 @@
       
     </div>
 
-    
-    <h2>Specifications</h2>
-    <dl class="specifications">
-      <div>
-        <dt>Product Code</dt>
-        <dd>adc-cube</dd>
-      </div>
-      
-      <div>
-        <dt>Primary function</dt>
-        <dd>Analog signal acquisition and scaling</dd>
-      </div>
-      
-      <div>
-        <dt>Sensor / interface</dt>
-        <dd>Two 0–10 V analog input channels</dd>
-      </div>
-      
-      <div>
-        <dt>Channels</dt>
-        <dd>Two analog-to-digital converter channels</dd>
-      </div>
-      
-      <div>
-        <dt>Measurement / operating range</dt>
-        <dd>0–10 V per channel</dd>
-      </div>
-      
-      <div>
-        <dt>Resolution</dt>
-        <dd>12 bits; 2.5 mV sensitivity</dd>
-      </div>
-      
-      <div>
-        <dt>Sampling rate</dt>
-        <dd>Over 200 kS/s per channel</dd>
-      </div>
-      
-      <div>
-        <dt>Digital filter bandwidth</dt>
-        <dd>Programmable from 0.1 Hz to 100 kHz per channel</dd>
-      </div>
-      
-      <div>
-        <dt>Inputs / outputs</dt>
-        <dd>Two analog voltage inputs with 5mm screw terminals</dd>
-      </div>
-      
-      <div>
-        <dt>Power input</dt>
-        <dd>5 V DC via 2.1 mm barrel male connector</dd>
-      </div>
-      
-      <div>
-        <dt>Wireless</dt>
-        <dd>2.4 GHz Wi-Fi</dd>
-      </div>
-      
-      <div>
-        <dt>Communication</dt>
-        <dd>MQTT publish/subscribe protocol</dd>
-      </div>
-      
-      <div>
-        <dt>Controller</dt>
-        <dd>Raspberry Pi Pico W / RP2040</dd>
-      </div>
-      
-      <div>
-        <dt>PCB dimensions</dt>
-        <dd>48 mm × 86 mm |</dd>
-      </div>
-      
-      <div>
-        <dt>Enclosure and mounting</dt>
-        <dd>53 mm × 93 mm × 25 mm; DIN Mod3-compatible enclosure with removable DIN-rail mount</dd>
-      </div>
-      
-      <div>
-        <dt>Platform</dt>
-        <dd>Blinky-Lite Instrumentation Platform</dd>
-      </div>
-      
-    </dl>
-    
+  
 
     <div class="product-content">
-      <table>
+      <h2 id="overview">Overview</h2>
+
+<p>The Blinky ADC Cube is a compact, wireless instrumentation module in the Blinky-Lite Instrumentation Platform. It is designed to acquire two 0–10 V analog signals close to the equipment or sensors being monitored, then communicate scaled measurements and alarms to a central Blinky-Lite control system.</p>
+
+<p>Built around the Raspberry Pi Pico W / RP2040, the module uses 2.4 GHz Wi-Fi and MQTT publish/subscribe communication. This event-driven approach supports distributed deployments without wired data connections and enables Blinky-Lite to use device information for recording, notifications, visualisation, and machine-protection workflows.</p>
+
+<table>
   <thead>
     <tr>
       <th>Enclosure</th>
@@ -160,12 +88,6 @@
     </tr>
   </tbody>
 </table>
-
-<h2 id="overview">Overview</h2>
-
-<p>The Blinky ADC Cube is a compact, wireless instrumentation module in the Blinky-Lite Instrumentation Platform. It is designed to acquire two 0–10 V analog signals close to the equipment or sensors being monitored, then communicate scaled measurements and alarms to a central Blinky-Lite control system.</p>
-
-<p>Built around the Raspberry Pi Pico W / RP2040, the module uses 2.4 GHz Wi-Fi and MQTT publish/subscribe communication. This event-driven approach supports distributed deployments without wired data connections and enables Blinky-Lite to use device information for recording, notifications, visualisation, and machine-protection workflows.</p>
 
 <h3 id="key-features">Key features</h3>
 
@@ -190,6 +112,90 @@
   <li>Distributed sensor installations requiring central visibility and configurable filtering</li>
   <li>Alarm and machine-protection workflows based on analog process values</li>
 </ul>
+
+<h3>Specifications</h3>
+<dl class="specifications">
+  <div>
+    <dt>Product Code</dt>
+    <dd>adc-cube</dd>
+  </div>
+  
+  <div>
+    <dt>Primary function</dt>
+    <dd>Analog signal acquisition and scaling</dd>
+  </div>
+  
+  <div>
+    <dt>Sensor / interface</dt>
+    <dd>Two 0–10 V analog input channels</dd>
+  </div>
+  
+  <div>
+    <dt>Channels</dt>
+    <dd>Two analog-to-digital converter channels</dd>
+  </div>
+  
+  <div>
+    <dt>Measurement / operating range</dt>
+    <dd>0–10 V per channel</dd>
+  </div>
+  
+  <div>
+    <dt>Resolution</dt>
+    <dd>12 bits; 2.5 mV sensitivity</dd>
+  </div>
+  
+  <div>
+    <dt>Sampling rate</dt>
+    <dd>Over 200 kS/s per channel</dd>
+  </div>
+  
+  <div>
+    <dt>Digital filter bandwidth</dt>
+    <dd>Programmable from 0.1 Hz to 100 kHz per channel</dd>
+  </div>
+  
+  <div>
+    <dt>Inputs / outputs</dt>
+    <dd>Two analog voltage inputs with 5mm screw terminals</dd>
+  </div>
+  
+  <div>
+    <dt>Power input</dt>
+    <dd>5 V DC via 2.1 mm barrel male connector</dd>
+  </div>
+  
+  <div>
+    <dt>Wireless</dt>
+    <dd>2.4 GHz Wi-Fi</dd>
+  </div>
+  
+  <div>
+    <dt>Communication</dt>
+    <dd>MQTT publish/subscribe protocol</dd>
+  </div>
+  
+  <div>
+    <dt>Controller</dt>
+    <dd>Raspberry Pi Pico W / RP2040</dd>
+  </div>
+  
+  <div>
+    <dt>PCB dimensions</dt>
+    <dd>48 mm × 86 mm |</dd>
+  </div>
+  
+  <div>
+    <dt>Enclosure and mounting</dt>
+    <dd>53 mm × 93 mm × 25 mm; DIN Mod3-compatible enclosure with removable DIN-rail mount</dd>
+  </div>
+  
+  <div>
+    <dt>Platform</dt>
+    <dd>Blinky-Lite Instrumentation Platform</dd>
+  </div>
+  
+</dl>
 
 <h2 id="getting-started">Getting started</h2>
 
@@ -298,5 +304,6 @@
   </div>
 </dialog>
   <script src="/assets/js/video-modal.js" defer></script>
+  <script src="/assets/js/mobile-menu.js" defer></script>
 </body>
 </html>

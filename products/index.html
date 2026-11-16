@@ -11,13 +11,46 @@ permalink: /products/
     <h1>Instrumentation for distributed equipment</h1>
 
     <p class="lead">
-      Explore purpose-built wireless devices designed to integrate
-      with Blinky-Lite. Email us to discuss your application,
-      availability and pricing.
+      Blinky-Lite Instrumentation is a family of compact, wireless
+      modules—called Cubes—for measurement, monitoring and interlock
+      status. Each Cube is designed to integrate with the Blinky-Lite
+      control platform.
     </p>
-
+    
+    <p>
+      Install Cubes close to the sensors or equipment they serve,
+      reducing the need for dedicated wired data connections to a
+      central system. A common Raspberry Pi Pico W foundation, Wi-Fi
+      and MQTT provide a consistent approach across the lineup.
+    </p>
+    
+    <h2>Report conditions as they happen</h2>
+    
+    <p>
+      Unlike a system that waits for the next polling interval,
+      Blinky-Lite Cubes use publish-subscribe messaging to report
+      measurements, state changes and alarm conditions when they occur.
+      An out-of-tolerance reading can be sent promptly to Blinky-Lite,
+      where it can trigger a notification or a configured
+      machine-protection action.
+    </p>
+    
+    <p>
+      This event-driven approach is especially valuable when equipment
+      needs attention quickly. Response time and protection depend on
+      the device configuration, network, and the complete protection
+      system.
+    </p>
+    
+    <h2>Explore the devices</h2>
+    
+    <p>
+      Select a device for technical details, or contact us to discuss
+      your application, availability and pricing.
+    </p>
+        
     <div class="cards">
-      {% assign products = site.products | sort: "title" %}
+      {% assign products = site.products | sort: "card-order" %}
       {% for product in products %}
       <article class="card">
         <h2 class="card-title">

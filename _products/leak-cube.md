@@ -1,8 +1,10 @@
 ---
 title: Water leak detection
+card-order: 5
 description: A wireless, two-channel,  water leak detection for wide-area coverage in remote equipment spaces, tunnels, basements, and other hard-to-reach locations.
 product-code: leak-cube
 #repository: https://github.com/bl-instr/leak-cube
+specifications_in_content: true
 specifications:
   - name: Primary function
     value: Resistive water leak detection and detector-integrity monitoring
@@ -37,10 +39,6 @@ specifications:
 
 ---
 
-| Enclosure | PCB | Installation |
-|-------------|---|--------------|
-| <img src="/assets/images/products/leak-cube/leak-cube.png" alt="leak-cube" width="270"/> | <img src="/assets/images/products/leak-cube/leakPCB.png" alt="leakPCB" width="270"/> | <img src="/assets/images/products/leak-cube/tunnel-install.jpg" alt="tunnel-install" width="270"/> |
-
 ## Overview
 
 The Leak Cube is a compact, wireless instrumentation module in the Blinky-Lite Instrumentation Platform. It is designed to detect water leaks using long, low-cost resistive wire detectors, then communicate leak states and alarms to a central Blinky-Lite control system.
@@ -50,6 +48,10 @@ Each detector strip consists of two parallel thin stainless-steel wires embedded
 The high-impedance measurement network is sensitive to impedances on the order of 10 MΩ. This enables detection of small conductivity changes while also helping identify an open circuit caused by a damaged or cut detector strip.
 
 Built around the Raspberry Pi Pico W / RP2040, the module uses 2.4 GHz Wi-Fi and MQTT publish/subscribe communication. This event-driven approach supports distributed deployments without wired data connections and enables Blinky-Lite to use device information for recording, notifications, visualisation, and machine-protection workflows.
+
+| Enclosure | PCB | Installation |
+|-------------|---|--------------|
+| <img src="/assets/images/products/leak-cube/leak-cube.png" alt="leak-cube" width="270"/> | <img src="/assets/images/products/leak-cube/leakPCB.png" alt="leakPCB" width="270"/> | <img src="/assets/images/products/leak-cube/tunnel-install.jpg" alt="tunnel-install" width="270"/> |
 
 ### Key features
 
@@ -70,8 +72,9 @@ Built around the Raspberry Pi Pico W / RP2040, the module uses 2.4 GHz Wi-Fi and
 - Distributed facility monitoring requiring central visibility
 - Leak alarms and machine-protection workflows
 
-## Getting started
+{% include product-specifications.html %}
 
+## Getting started
 
 ### Hardware
 

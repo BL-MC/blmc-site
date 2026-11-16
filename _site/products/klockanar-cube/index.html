@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    Configurable 48-LED light ring | BL Monitor and Control AB
+  </title>
+  <link rel="icon" href="/assets/images/project-logo.png" type="image/x-icon">
+
+  <meta
+    name="description"
+    content="A configurable 48-LED light ring for engineers who want a fun, wireless Blinky-Lite project."
+  >
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container navigation">
+      <a class="brand" href="/">
+        BL Monitor and Control AB
+      </a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-navigation">
+        <span aria-hidden="true">☰</span> Menu
+      </button>
+      <nav id="main-navigation" class="nav-links" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/blinky-lite/">Blinky-Lite</a>
+        <a href="/products/">Instrumentation</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section">
+  <div class="container product-page">
+    <p>
+      <a href="/products/">← All hardware</a>
+    </p>
+
+    <p class="eyebrow">Blinky-Lite Instrumentation</p>
+    <h1>Configurable 48-LED light ring</h1>
+    <p class="lead">A configurable 48-LED light ring for engineers who want a fun, wireless Blinky-Lite project.</p>
+
+    
+
+    <div class="actions">
+      <a class="button"
+         href="mailto:info@bl-mc.se?subject=Hardware+enquiry%3A+klockanar-cube">
+        Email us about this device
+      </a>
+
+      
+      
+    </div>
+
+  
+
+    <div class="product-content">
+      <h2 id="overview">Overview</h2>
+
+<p>The Klockanar Cube is a 48-LED ring based on the Raspberry Pi Pico W / RP2040 platform used throughout the Blinky-Lite Instrumentation lineup. It is designed for visual effects, displays, clocks, and creative experimentation.</p>
+
+<p>The LEDs are embedded in a 3D-printed ring enclosure. STL files are included so the enclosure can be printed, reproduced, and adapted for custom installations.</p>
+
+<p>The ring connects over 2.4 GHz Wi-Fi and uses MQTT publish/subscribe communication for remote configuration and integration with Blinky-Lite.</p>
+
+<p><img src="/assets/images/products/klockanar-cube/klockanar.gif" alt="klockanar-cube" width="800" /></p>
+
+<h3 id="features">Features</h3>
+
+<ul>
+  <li>48 controllable LEDs: Individually controllable LEDs arranged in a full ring.</li>
+  <li>3D-printed design: The LED ring is embedded in a printed enclosure; STL files are included.</li>
+  <li>Display modes: Glow Ring, Comet, Collide, Explode, Mood, Colorwave, and Clock.</li>
+  <li>Adjustable effects: Intensity, hues, and timing can be configured for every mode.</li>
+  <li>Wireless control: 2.4 GHz Wi-Fi and MQTT publish/subscribe communication.</li>
+  <li>Shared controller platform: Raspberry Pi Pico W / RP2040.</li>
+  <li>Open-source design: MIT-licensed firmware and adaptable 3D-print files.</li>
+</ul>
+
+<h3 id="typical-applications">Typical applications</h3>
+
+<ul>
+  <li>Desk, laboratory, and workshop lighting</li>
+  <li>Visual status and notification displays</li>
+  <li>Clock and ambient-light displays</li>
+  <li>Interactive demonstrations and engineering outreach</li>
+  <li>Custom LED effects and experimental visualisation</li>
+</ul>
+
+<h3>Specifications</h3>
+<dl class="specifications">
+  <div>
+    <dt>Product Code</dt>
+    <dd>klockanar-cube</dd>
+  </div>
+  
+  <div>
+    <dt>LEDs</dt>
+    <dd>48 individually controllable LEDs in a ring |</dd>
+  </div>
+  
+  <div>
+    <dt>Modes</dt>
+    <dd>Glow Ring, Comet, Collide, Explode, Mood, Colorwave, Clock |</dd>
+  </div>
+  
+  <div>
+    <dt>Configuration</dt>
+    <dd>Adjustable intensity, hue, and timing |</dd>
+  </div>
+  
+  <div>
+    <dt>Enclosure</dt>
+    <dd>3D-printed ring; STL files included |</dd>
+  </div>
+  
+  <div>
+    <dt>Power input</dt>
+    <dd>5 V DC via 2.1 mm barrel connector |</dd>
+  </div>
+  
+  <div>
+    <dt>Wireless</dt>
+    <dd>2.4 GHz Wi-Fi |</dd>
+  </div>
+  
+  <div>
+    <dt>Communication</dt>
+    <dd>MQTT publish/subscribe protocol |</dd>
+  </div>
+  
+  <div>
+    <dt>Controller</dt>
+    <dd>Raspberry Pi Pico W / RP2040 |</dd>
+  </div>
+  
+</dl>
+
+<h2 id="getting-started">Getting started</h2>
+
+<h3 id="hardware">Hardware</h3>
+
+<ol>
+  <li>Print or obtain the ring enclosure using the included STL files.</li>
+  <li>Install the 48-LED ring in the printed enclosure according to the assembly documentation.</li>
+  <li>Connect a regulated 5 V DC supply through the 2.1 mm barrel connector.</li>
+  <li>Place the ring where its light output and cable routing suit the intended application.</li>
+</ol>
+
+<h3 id="firmware-build-target">Firmware build target</h3>
+
+<p>The firmware targets the Raspberry Pi Pico W / RP2040 using the Arduino-Pico board support.</p>
+<ul>
+  <li>Board: Pico W / RP2040-compatible target</li>
+  <li>Flash layout: Sketch 1920 KB, filesystem 128 KB</li>
+  <li>FQBN flash option: flash=2097152_131072</li>
+</ul>
+
+<h3 id="open-source-software-and-licensing">Open-source software and licensing</h3>
+
+<p>The firmware is released under the MIT License, giving users broad permission to study, modify, and adapt the code for their own applications. The open hardware design and included STL files can likewise be customised for creative or site-specific requirements. The firmware uses the open-source Arduino-BlinkyPicoW library, which is also available under the MIT License.</p>
+
+<h3 id="configuration">Configuration</h3>
+
+<ol>
+  <li>Build and upload the firmware using the project source and configuration files.</li>
+  <li>Use the onboard web interface to set or update Wi-Fi credentials.</li>
+  <li>Configure the MQTT connection and create the corresponding device integration in Blinky-Lite.</li>
+  <li>Select Glow Ring, Comet, Collide, Explode, Mood, Colorwave, or Clock mode.</li>
+  <li>Adjust the intensity, hues, and timing for the chosen effect.</li>
+</ol>
+
+<h3 id="integration-model">Integration model</h3>
+
+<p>The Klockanar Cube uses MQTT to receive configuration and mode settings. This event-driven model enables remote control of its visual effects through a Blinky-Lite deployment.</p>
+
+<p>Installation considerations</p>
+
+<ul>
+  <li>Use a regulated 5 V DC supply with adequate capacity for the selected LED intensity and effect.</li>
+  <li>Protect the ring and electronics from moisture, heat, and mechanical damage unless the enclosure has been adapted for those conditions.</li>
+  <li>Use the included STL files as a starting point when adapting the enclosure, mounting method, or LED presentation.</li>
+</ul>
+
+
+    </div>
+
+    <div class="notice">
+      <strong>Planning an installation?</strong>
+      Confirm specifications, operating limits and suitability for your
+      application with us before ordering or relying on a device for
+      protection functions.
+    </div>
+  </div>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <strong>BL Monitor and Control AB</strong>
+        <p>Control software, instrumentation and integration.</p>
+      </div>
+
+      <div>
+        <a href="mailto:info@bl-mc.se">info@bl-mc.se</a>
+        <br>
+        <a href="/blinky-lite/">Blinky-Lite™</a>
+        &nbsp;·&nbsp;
+        <a href="/products/">Instrumentation</a>
+      </div>
+    </div>
+  </footer>
+  <dialog
+  class="video-modal"
+  id="video-modal"
+  aria-labelledby="video-modal-title"
+>
+  <div class="video-modal-header">
+    <h2 id="video-modal-title">Video</h2>
+
+    <button
+      type="button"
+      class="video-modal-close"
+      aria-label="Close video"
+    >
+      &times;
+    </button>
+  </div>
+
+  <div class="video-frame">
+    <iframe
+      id="video-modal-player"
+      title="Blinky-Lite video"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</dialog>
+  <script src="/assets/js/video-modal.js" defer></script>
+  <script src="/assets/js/mobile-menu.js" defer></script>
+</body>
+</html>

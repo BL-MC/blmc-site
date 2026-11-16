@@ -1,8 +1,10 @@
 ---
 title: Analog signal acquisition
+card-order: 1
 description: A  wireless, two-channel, high-speed analog acquisition for connecting 0–10 V sensors.
 #repository: https://github.com/bl-instr/adc-cube
 product-code: adc-cube
+specifications_in_content: true
 specifications:
   - name: Primary function
     value: Analog signal acquisition and scaling
@@ -36,15 +38,15 @@ specifications:
     value: Blinky-Lite Instrumentation Platform
 ---
 
-| Enclosure | PCB |
-|-----------|-----|
-|<img src="/assets/images/products/adc-cube/bl-adc-cube.png" alt="bl-adc-cube" width="400"/>|<img src="/assets/images/products/adc-cube/adcPCB.png" alt="adcPCB" width="400"/>
-
 ## Overview
 
 The Blinky ADC Cube is a compact, wireless instrumentation module in the Blinky-Lite Instrumentation Platform. It is designed to acquire two 0–10 V analog signals close to the equipment or sensors being monitored, then communicate scaled measurements and alarms to a central Blinky-Lite control system.
 
 Built around the Raspberry Pi Pico W / RP2040, the module uses 2.4 GHz Wi-Fi and MQTT publish/subscribe communication. This event-driven approach supports distributed deployments without wired data connections and enables Blinky-Lite to use device information for recording, notifications, visualisation, and machine-protection workflows.
+
+| Enclosure | PCB |
+|-----------|-----|
+|<img src="/assets/images/products/adc-cube/bl-adc-cube.png" alt="bl-adc-cube" width="400"/>|<img src="/assets/images/products/adc-cube/adcPCB.png" alt="adcPCB" width="400"/>
 
 ### Key features
 
@@ -66,8 +68,9 @@ Built around the Raspberry Pi Pico W / RP2040, the module uses 2.4 GHz Wi-Fi and
 - Distributed sensor installations requiring central visibility and configurable filtering
 - Alarm and machine-protection workflows based on analog process values
 
-## Getting started
+{% include product-specifications.html %}
 
+## Getting started
 
 ### Hardware
 

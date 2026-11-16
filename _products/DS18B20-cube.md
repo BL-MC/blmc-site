@@ -1,8 +1,10 @@
 ---
 title: Digital temperature measurement
+card-order: 6
 description: A  wireless, three-channel, digital temperature measurement for rugged environments using hermetically sealed DS18B20 sensors.
 product-code: DS18B20-cube
 #repository: https://github.com/bl-instr/DS18B20-cube
+specifications_in_content: true
 specifications:
   - name: Primary function
     value: Digital temperature measurement
@@ -35,10 +37,6 @@ specifications:
 
 ---
 
-| Enclosure | PCB |
-|-----------|-----|
-|<img src="/assets/images/products/DS18B20-cube/DS18B20-cube.png" alt="DS18B20-cube" width="400"/>|<img src="/assets/images/products/DS18B20-cube/DS18B20PCB.png" alt="DS18B20PCB" width="400"/>
-
 ## Overview
 
 The DS18B20 Cube is a compact, wireless instrumentation module in the Blinky-Lite Instrumentation Platform. It is designed to read three DS18B20 digital temperature sensors near the equipment or environment being monitored, then communicate temperatures and alarms to a central Blinky-Lite control system.
@@ -46,6 +44,10 @@ The DS18B20 Cube is a compact, wireless instrumentation module in the Blinky-Lit
 DS18B20 sensors are available in hermetically sealed packages, making them well suited to rugged deployments. Each channel provides precise temperature measurement from −55 °C to +125 °C with 0.0625 °C resolution.
 
 Built around the Raspberry Pi Pico W / RP2040, the module uses 2.4 GHz Wi-Fi and MQTT publish/subscribe communication. This event-driven approach supports distributed deployments without wired data connections and enables Blinky-Lite to use device information for recording, notifications, visualisation, and machine-protection workflows.
+
+| Enclosure | PCB |
+|-----------|-----|
+|<img src="/assets/images/products/DS18B20-cube/DS18B20-cube.png" alt="DS18B20-cube" width="400"/>|<img src="/assets/images/products/DS18B20-cube/DS18B20PCB.png" alt="DS18B20PCB" width="400"/>
 
 ### Key features
 
@@ -66,8 +68,9 @@ Built around the Raspberry Pi Pico W / RP2040, the module uses 2.4 GHz Wi-Fi and
 - Distributed temperature sensing requiring central visibility
 - Temperature alarms and machine-protection workflows
 
-## Getting started
+{% include product-specifications.html %}
 
+## Getting started
 
 ### Hardware
 

@@ -25,8 +25,14 @@
       <a class="brand" href="/">
         BL Monitor and Control AB
       </a>
-
-      <nav class="nav-links" aria-label="Main navigation">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-navigation">
+        <span aria-hidden="true">☰</span> Menu
+      </button>
+      <nav id="main-navigation" class="nav-links" aria-label="Main navigation">
         <a href="/">Home</a>
         <a href="/blinky-lite/">Blinky-Lite</a>
         <a href="/products/">Instrumentation</a>
@@ -279,5 +285,6 @@
   </div>
 </dialog>
   <script src="/assets/js/video-modal.js" defer></script>
+  <script src="/assets/js/mobile-menu.js" defer></script>
 </body>
 </html>

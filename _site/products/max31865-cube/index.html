@@ -25,8 +25,14 @@
       <a class="brand" href="/">
         BL Monitor and Control AB
       </a>
-
-      <nav class="nav-links" aria-label="Main navigation">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-navigation">
+        <span aria-hidden="true">☰</span> Menu
+      </button>
+      <nav id="main-navigation" class="nav-links" aria-label="Main navigation">
         <a href="/">Home</a>
         <a href="/blinky-lite/">Blinky-Lite</a>
         <a href="/products/">Instrumentation</a>
@@ -59,104 +65,20 @@
       
     </div>
 
-    
-    <h2>Specifications</h2>
-    <dl class="specifications">
-      <div>
-        <dt>Product Code</dt>
-        <dd>max31865-cube</dd>
-      </div>
-      
-      <div>
-        <dt>Primary function</dt>
-        <dd>Precision four-terminal resistance thermometry and temperature characterisation</dd>
-      </div>
-      
-      <div>
-        <dt>Sensor / interface</dt>
-        <dd>Four-terminal resistance temperature sensors using MAX31865 resistance-to-digital converter chips</dd>
-      </div>
-      
-      <div>
-        <dt>Channels</dt>
-        <dd>Two independent four-terminal resistance temperature-measurement channels</dd>
-      </div>
-      
-      <div>
-        <dt>Resolution</dt>
-        <dd>15 bits</dd>
-      </div>
-      
-      <div>
-        <dt>Resistance precision</dt>
-        <dd>0.13 Ω</dd>
-      </div>
-      
-      <div>
-        <dt>Temperature conversion</dt>
-        <dd>Seventh-order polynomial fit per channel; coefficients downloaded from Blinky-Lite</dd>
-      </div>
-      
-      <div>
-        <dt>Polynomial fit modes</dt>
-        <dd>Log-log, linear-linear, log-linear, and linear-log</dd>
-      </div>
-      
-      <div>
-        <dt>Measurement excitation</dt>
-        <dd>100 ms pulsed measurements at a user-defined interval</dd>
-      </div>
-      
-      <div>
-        <dt>Noise reduction</dt>
-        <dd>User-configurable averaging count per channel</dd>
-      </div>
-      
-      <div>
-        <dt>Inputs / outputs</dt>
-        <dd>5 mm screw terminals for four-terminal sensor wiring</dd>
-      </div>
-      
-      <div>
-        <dt>Power input</dt>
-        <dd>5 V DC via 5 mm screw terminals</dd>
-      </div>
-      
-      <div>
-        <dt>Wireless</dt>
-        <dd>2.4 GHz Wi-Fi |</dd>
-      </div>
-      
-      <div>
-        <dt>Communication</dt>
-        <dd>QTT publish/subscribe protocol</dd>
-      </div>
-      
-      <div>
-        <dt>Controller</dt>
-        <dd>Raspberry Pi Pico W / RP2040</dd>
-      </div>
-      
-      <div>
-        <dt>PCB dimensions</dt>
-        <dd>67 mm × 86 mm</dd>
-      </div>
-      
-      <div>
-        <dt>Enclosure and mounting</dt>
-        <dd>72 mm × 93 mm × 25 mm; DIN Mod4-compatible enclosure with removable DIN-rail mount</dd>
-      </div>
-      
-      <div>
-        <dt>Platform</dt>
-        <dd>Blinky-Lite Instrumentation Platform</dd>
-      </div>
-      
-    </dl>
-    
+  
 
     <div class="product-content">
-      <table>
+      <h2 id="overview">Overview</h2>
+
+<p>The MAX31865 Cube is a compact, wireless instrumentation module in the Blinky-Lite Instrumentation Platform. It is designed to perform two precision four-terminal resistance measurements for temperature sensing, then communicate resistance and calculated temperature data to a central Blinky-Lite control system.</p>
+
+<p>Four-terminal measurement removes the effect of lead resistance, which is necessary for precision resistance thermometry, including cryogenic applications. Each channel uses a MAX31865 resistance-to-digital converter with 15-bit resolution and resistance precision of 0.13 Ω.</p>
+
+<p>For accurate temperature conversion across a wide operating range, each channel evaluates a seventh-order polynomial fit. Blinky-Lite downloads the coefficients to the cube and supports log-log, linear-linear, log-linear, and linear-log fitting modes.</p>
+
+<p>Built around the Raspberry Pi Pico W / RP2040, the module uses 2.4 GHz Wi-Fi and MQTT publish/subscribe communication. This event-driven approach supports distributed deployments without wired data connections and enables Blinky-Lite to use device information for recording, notifications, visualisation, and machine-protection workflows.</p>
+
+<table>
   <thead>
     <tr>
       <th>Enclosure</th>
@@ -170,16 +92,6 @@
     </tr>
   </tbody>
 </table>
-
-<h2 id="overview">Overview</h2>
-
-<p>The MAX31865 Cube is a compact, wireless instrumentation module in the Blinky-Lite Instrumentation Platform. It is designed to perform two precision four-terminal resistance measurements for temperature sensing, then communicate resistance and calculated temperature data to a central Blinky-Lite control system.</p>
-
-<p>Four-terminal measurement removes the effect of lead resistance, which is necessary for precision resistance thermometry, including cryogenic applications. Each channel uses a MAX31865 resistance-to-digital converter with 15-bit resolution and resistance precision of 0.13 Ω.</p>
-
-<p>For accurate temperature conversion across a wide operating range, each channel evaluates a seventh-order polynomial fit. Blinky-Lite downloads the coefficients to the cube and supports log-log, linear-linear, log-linear, and linear-log fitting modes.</p>
-
-<p>Built around the Raspberry Pi Pico W / RP2040, the module uses 2.4 GHz Wi-Fi and MQTT publish/subscribe communication. This event-driven approach supports distributed deployments without wired data connections and enables Blinky-Lite to use device information for recording, notifications, visualisation, and machine-protection workflows.</p>
 
 <h3 id="key-features">Key features</h3>
 
@@ -205,6 +117,100 @@
   <li>Distributed precision-sensor installations requiring central visibility</li>
   <li>Long-duration measurements where limiting sensor self-heating is important</li>
 </ul>
+
+<h3>Specifications</h3>
+<dl class="specifications">
+  <div>
+    <dt>Product Code</dt>
+    <dd>max31865-cube</dd>
+  </div>
+  
+  <div>
+    <dt>Primary function</dt>
+    <dd>Precision four-terminal resistance thermometry and temperature characterisation</dd>
+  </div>
+  
+  <div>
+    <dt>Sensor / interface</dt>
+    <dd>Four-terminal resistance temperature sensors using MAX31865 resistance-to-digital converter chips</dd>
+  </div>
+  
+  <div>
+    <dt>Channels</dt>
+    <dd>Two independent four-terminal resistance temperature-measurement channels</dd>
+  </div>
+  
+  <div>
+    <dt>Resolution</dt>
+    <dd>15 bits</dd>
+  </div>
+  
+  <div>
+    <dt>Resistance precision</dt>
+    <dd>0.13 Ω</dd>
+  </div>
+  
+  <div>
+    <dt>Temperature conversion</dt>
+    <dd>Seventh-order polynomial fit per channel; coefficients downloaded from Blinky-Lite</dd>
+  </div>
+  
+  <div>
+    <dt>Polynomial fit modes</dt>
+    <dd>Log-log, linear-linear, log-linear, and linear-log</dd>
+  </div>
+  
+  <div>
+    <dt>Measurement excitation</dt>
+    <dd>100 ms pulsed measurements at a user-defined interval</dd>
+  </div>
+  
+  <div>
+    <dt>Noise reduction</dt>
+    <dd>User-configurable averaging count per channel</dd>
+  </div>
+  
+  <div>
+    <dt>Inputs / outputs</dt>
+    <dd>5 mm screw terminals for four-terminal sensor wiring</dd>
+  </div>
+  
+  <div>
+    <dt>Power input</dt>
+    <dd>5 V DC via 5 mm screw terminals</dd>
+  </div>
+  
+  <div>
+    <dt>Wireless</dt>
+    <dd>2.4 GHz Wi-Fi |</dd>
+  </div>
+  
+  <div>
+    <dt>Communication</dt>
+    <dd>QTT publish/subscribe protocol</dd>
+  </div>
+  
+  <div>
+    <dt>Controller</dt>
+    <dd>Raspberry Pi Pico W / RP2040</dd>
+  </div>
+  
+  <div>
+    <dt>PCB dimensions</dt>
+    <dd>67 mm × 86 mm</dd>
+  </div>
+  
+  <div>
+    <dt>Enclosure and mounting</dt>
+    <dd>72 mm × 93 mm × 25 mm; DIN Mod4-compatible enclosure with removable DIN-rail mount</dd>
+  </div>
+  
+  <div>
+    <dt>Platform</dt>
+    <dd>Blinky-Lite Instrumentation Platform</dd>
+  </div>
+  
+</dl>
 
 <h2 id="getting-started">Getting started</h2>
 
@@ -314,5 +320,6 @@ In a typical deployment, the device connects by Wi-Fi to the network and communi
   </div>
 </dialog>
   <script src="/assets/js/video-modal.js" defer></script>
+  <script src="/assets/js/mobile-menu.js" defer></script>
 </body>
 </html>

@@ -1,8 +1,10 @@
 ---
 title: Thermocouple temperature monitoring
+card-order: 8
 description: Wireless, three-channel,  K-type thermocouple measurement.
 product-code: thermocouple-cube
 #repository: https://github.com/bl-instr/thermocouple-cube
+specifications_in_content: true
 specifications:
   - name: Primary function
     value: Thermocouple temperature monitoring
@@ -32,10 +34,6 @@ specifications:
     value: Blinky-Lite Instrumentation Platform
 ---
 
-| Enclosure | PCB |     |
-|-----------|-----|-----|
-|<img src="/assets/images/products/thermocouple-cube/thermocouple-cube.png" alt="thermocouple-cube" width="270"/>|<img src="/assets/images/products/thermocouple-cube/thermocoupleTopPCB.png" alt="thermocoupleTopPCB" width="270"/>|<img src="/assets/images/products/thermocouple-cube/thermocoupleBotPCB.png" alt="thermocoupleBotPCB" width="270"/>|
-
 ## Overview
 
 The Thermocouple Cube is a compact, wireless instrumentation module in the Blinky-Lite Instrumentation Platform. It is designed to read three K-type thermocouples near the equipment or process being monitored, then communicate temperatures and alarms to a central Blinky-Lite control system.
@@ -43,6 +41,10 @@ The Thermocouple Cube is a compact, wireless instrumentation module in the Blink
 Each channel uses a MAX31855 thermocouple-to-digital converter, providing temperature measurement from −200 °C to +1350 °C with 0.25 °C resolution. The three channels support distributed temperature monitoring in laboratory, industrial, and control-system applications.
 
 Built around the Raspberry Pi Pico W / RP2040, the module uses 2.4 GHz Wi-Fi and MQTT publish/subscribe communication. This event-driven approach supports distributed deployments without wired data connections and enables Blinky-Lite to use device information for recording, notifications, visualisation, and machine-protection workflows.
+
+| Enclosure | PCB |     |
+|-----------|-----|-----|
+|<img src="/assets/images/products/thermocouple-cube/thermocouple-cube.png" alt="thermocouple-cube" width="270"/>|<img src="/assets/images/products/thermocouple-cube/thermocoupleTopPCB.png" alt="thermocoupleTopPCB" width="270"/>|<img src="/assets/images/products/thermocouple-cube/thermocoupleBotPCB.png" alt="thermocoupleBotPCB" width="270"/>|
 
 ### Key features
 
@@ -62,8 +64,9 @@ Built around the Raspberry Pi Pico W / RP2040, the module uses 2.4 GHz Wi-Fi and
 - Distributed thermal monitoring requiring central visibility
 - Temperature alarms and machine-protection workflows
 
-## Getting started
+{% include product-specifications.html %}
 
+## Getting started
 
 ### Hardware
 
