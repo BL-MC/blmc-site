@@ -20,23 +20,14 @@ permalink: /blinky-lite/
 
       <div class="actions">
         <a class="button button-secondary open-video"
-          href="https://player.vimeo.com/video/913219981?dnt=1"
-          data-video-title="Blinky-Lite Overview">
+           href="https://player.vimeo.com/video/913219981?dnt=1"
+           data-video-title="Blinky-Lite Overview">
           Watch the overview video
-        </a>
-
-        <a class="button button-secondary"
-          href="{{ '/blinky-lite/features/' | relative_url }}">
-          Features
         </a>
 
         <a class="button button-secondary"
           href="{{ '/blinky-lite/architecture/' | relative_url }}">
           Architecture and security
-        </a>
-        <a class="button"
-           href="https://blinky-lite.org/docs/">
-          Read the documentation
         </a>
 
         <a class="button button-secondary"
@@ -65,41 +56,109 @@ permalink: /blinky-lite/
   </div>
 </section>
 
-<section class="section section-white">
+<section class="section section-white" id="features">
   <div class="container">
-    <p class="eyebrow">What Blinky-Lite provides</p>
+    <p class="eyebrow">Platform features</p>
 
-    <h2>Monitoring and control for distributed equipment.</h2>
+    <h2>From device information to informed response.</h2>
+
+    <p class="section-intro">
+      Blinky-Lite brings device communication, monitoring,
+      applications and access controls together in one platform.
+    </p>
 
     <div class="cards">
       <article class="card">
-        <h3>See equipment information</h3>
+        <h3>Remote access</h3>
         <p>
-          Use web-based applications to view device information,
-          alarms and trends.
+          Use web applications to give authorized specialists access
+          to equipment information and controls from desktops,
+          tablets or mobile devices.
         </p>
       </article>
 
       <article class="card">
-        <h3>Support remote response</h3>
+        <h3>Alarms and notifications</h3>
         <p>
-          Give authorized specialists access to information and
-          controls when they are away from the equipment.
+          Monitor equipment conditions and use alarm and notification
+          capabilities to help teams respond when attention is needed.
         </p>
       </article>
 
       <article class="card">
-        <h3>Adapt to your needs</h3>
+        <h3>Data and history</h3>
         <p>
-          Build solutions around your equipment using an open-source
-          platform and integration support where needed.
+          View device information and plots, and use data archiving
+          and access and setting history to understand system activity.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Custom applications</h3>
+        <p>
+          Use the application builder and its library of cards and
+          widgets to configure dashboards for your equipment.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Controlled access</h3>
+        <p>
+          Use authentication and role-based permissions to control
+          access to applications and data. Security also depends on
+          deployment and ongoing operation.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Device integration</h3>
+        <p>
+          Connect devices through publish-subscribe messaging and
+          integrate their information into Blinky-Lite applications.
         </p>
       </article>
     </div>
   </div>
 </section>
 
-<section class="section" id="security">
+<section class="section">
+  <div class="container two-column">
+    <div>
+      <p class="eyebrow">Built to adapt</p>
+
+      <h2>Make the interface fit the equipment.</h2>
+
+      <p>
+        Different facilities need different views of their systems.
+        Blinky-Lite includes an application builder for configuring
+        dashboard applications and a framework for developing
+        additional application components.
+      </p>
+
+      <p>
+        BL Monitor and Control can help integrate the platform with
+        your equipment and develop solutions for your requirements.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Open source and integration expertise</h3>
+
+      <p>
+        Blinky-Lite is released under the MIT License. Customers can
+        use and adapt the available code and choose how they obtain
+        integration and support.
+      </p>
+
+      <p>
+        Open source does not guarantee future maintenance or support,
+        but it gives customers options if their needs change.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white" id="security">
   <div class="container two-column">
     <div>
       <p class="eyebrow">Security architecture</p>
@@ -119,8 +178,8 @@ permalink: /blinky-lite/
       </p>
 
       <a class="text-link"
-         href="https://blinky-lite.org/docs/pages/overview/security.html">
-        Read the security overview →
+         href="{{ '/blinky-lite/architecture/' | relative_url }}">
+        Explore the architecture and watch the video →
       </a>
     </div>
 
@@ -133,44 +192,6 @@ permalink: /blinky-lite/
         <li>Role-based permissions help control access.</li>
         <li>Deployment and operating practices remain important.</li>
       </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section section-white">
-  <div class="container two-column">
-    <div>
-      <p class="eyebrow">Open source</p>
-
-      <h2>Open code. More choice.</h2>
-
-      <p>
-        Blinky-Lite is released under the MIT License. Customers retain
-        access to the available code and can use and adapt it if their
-        support needs change.
-      </p>
-
-      <p>
-        You can work with BL Monitor and Control, use your own
-        resources or engage another provider. Open source does not
-        guarantee future maintenance or support, but it gives you
-        options.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Expert integration</h3>
-
-      <p>
-        BL Monitor and Control AB develops Blinky-Lite and uses it as
-        an integration tool. Contact us to discuss how the platform
-        could fit your equipment and operational requirements.
-      </p>
-
-      <a class="text-link"
-         href="mailto:info@bl-mc.se?subject=Blinky-Lite%20integration">
-        Email us about integration →
-      </a>
     </div>
   </div>
 </section>
@@ -200,8 +221,8 @@ permalink: /blinky-lite/
     <h2>Explore the platform or talk to us.</h2>
 
     <p>
-      The existing Blinky-Lite documentation remains available while
-      we develop this unified company website.
+      Read the existing technical documentation or contact us to
+      discuss your equipment and integration requirements.
     </p>
 
     <div class="actions">

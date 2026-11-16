@@ -1,30 +1,108 @@
 ---
-title: Thermocouple Cube
-description: A wireless temperature-monitoring module for three K-type thermocouples.
+title: Thermocouple temperature monitoring
+description: Wireless, three-channel,  K-type thermocouple measurement.
+product-code: thermocouple-cube
 #repository: https://github.com/bl-instr/thermocouple-cube
 specifications:
   - name: Primary function
     value: Thermocouple temperature monitoring
+  - name: Sensor / interface
+    value: K-type thermocouples using MAX31855 thermocouple-to-digital converter chips
   - name: Channels
-    value: Three independent K-type thermocouple channels
-  - name: Converter
-    value: MAX31855
-  - name: Connectivity
-    value: 2.4 GHz Wi-Fi and MQTT
-  - name: Power
-    value: 5 V DC
+    value: Three independent thermocouple channels
+  - name: Measurement / operating range
+    value: −200 °C to +1350 °C
+  - name: Resolution
+    value: 0.25 °C
+  - name: Inputs / outputs
+    value: 5 mm screw terminals for thermocouple field wiring
+  - name: Power input
+    value: 5 V DC via 5 mm screw terminals
+  - name: Wireless
+    value: 2.4 GHz Wi-Fi
+  - name: Communication
+    value: MQTT publish/subscribe protocol
   - name: Controller
     value: Raspberry Pi Pico W / RP2040
+  - name: PCB dimension
+    value: 50 mm × 87 mm
+  - name: Enclosure and mounting
+    value: 55 mm × 93 mm × 26 mm; DIN Mod3-compatible enclosure with removable DIN-rail mount
+  - name: Platform
+    value: Blinky-Lite Instrumentation Platform
 ---
+
+| Enclosure | PCB |     |
+|-----------|-----|-----|
+|<img src="/assets/images/products/thermocouple-cube/thermocouple-cube.png" alt="thermocouple-cube" width="270"/>|<img src="/assets/images/products/thermocouple-cube/thermocoupleTopPCB.png" alt="thermocoupleTopPCB" width="270"/>|<img src="/assets/images/products/thermocouple-cube/thermocoupleBotPCB.png" alt="thermocoupleBotPCB" width="270"/>|
 
 ## Overview
 
-The Thermocouple Cube is designed to monitor temperatures at
-distributed locations and communicate readings to the Blinky-Lite
-control platform.
+The Thermocouple Cube is a compact, wireless instrumentation module in the Blinky-Lite Instrumentation Platform. It is designed to read three K-type thermocouples near the equipment or process being monitored, then communicate temperatures and alarms to a central Blinky-Lite control system.
 
-## Potential applications
+Each channel uses a MAX31855 thermocouple-to-digital converter, providing temperature measurement from −200 °C to +1350 °C with 0.25 °C resolution. The three channels support distributed temperature monitoring in laboratory, industrial, and control-system applications.
 
-- Equipment temperature monitoring
-- Laboratory and research installations
-- Distributed temperature measurements
+Built around the Raspberry Pi Pico W / RP2040, the module uses 2.4 GHz Wi-Fi and MQTT publish/subscribe communication. This event-driven approach supports distributed deployments without wired data connections and enables Blinky-Lite to use device information for recording, notifications, visualisation, and machine-protection workflows.
+
+### Key features
+
+- Three-channel thermocouple measurement: Read three independent K-type thermocouples.
+- Wide temperature range: Measure from −200 °C to +1350 °C with the MAX31855.
+- Fine temperature resolution: 0.25 °C per channel.
+- PLC-style field wiring: 5 mm screw terminals simplify thermocouple and power connections in PLC-like installations.
+- Wireless connectivity: 2.4 GHz Wi-Fi for remote or distributed installations.
+- Event-driven integration: MQTT publish/subscribe communication with Blinky-Lite for prompt temperature and alarm reporting.
+- Open-source firmware: Microcontroller code can be adapted for site-specific instrumentation and integration requirements.
+
+### Typical applications
+
+- Industrial process-temperature monitoring
+- Laboratory and test-system temperature measurement
+- Equipment over-temperature monitoring
+- Distributed thermal monitoring requiring central visibility
+- Temperature alarms and machine-protection workflows
+
+## Getting started
+
+
+### Hardware
+
+1. Install the Thermocouple Cube close to the thermocouples or equipment being monitored.
+2. Connect each K-type thermocouple to its assigned 5 mm screw terminals according to the product wiring documentation.
+3. Check thermocouple polarity and ensure the connected probes are suitable for the intended temperature range and environment.
+4. Connect the regulated 5 V DC supply through the dedicated 5 mm screw terminals.
+5. Mount the enclosure on a DIN rail when required, or remove the DIN-rail mount for an alternative installation.
+
+### Firmware build target
+
+The firmware targets the Raspberry Pi Pico W / RP2040 using the Arduino-Pico board support.
+- Board: Pico W / RP2040-compatible target
+- Flash layout: Sketch 1920 KB, filesystem 128 KB
+- FQBN flash option: flash=2097152_131072
+
+### Open-source software and licensing
+
+The firmware is released under the MIT License, giving users broad permission to study, modify, and adapt the code for their own applications. The open hardware design can likewise be customised to suit site-specific requirements. The firmware uses the open-source Arduino-BlinkyPicoW library, which is also available under the MIT License.
+
+### Configuration
+
+1. Build and upload the firmware using the project’s source and configuration files.
+2. Use the onboard web interface to set or update Wi-Fi credentials.
+3. Configure the MQTT connection and create the corresponding device integration in Blinky-Lite.
+4. Set temperature scaling, alarm thresholds, and any required operating limits for each channel.
+5. Verify that normal temperatures and alarm events appear as expected in Blinky-Lite.
+
+### Integration model
+
+The Thermocouple Cube uses MQTT to publish temperature measurements and alarm events. This event-driven model avoids conventional polling and enables prompt control-system responses to changing thermal conditions.
+
+In a typical deployment, the device connects by Wi-Fi to the network and communicates through an MQTT broker. Blinky-Lite represents it as an integrated instrumentation node and can use its information for recording, display, notification, alarms, and machine-protection logic.
+
+### Measurement, safety, and installation considerations
+
+- Confirm that connected thermocouples, wiring, and environmental conditions are within the product’s specified limits.
+- Observe K-type thermocouple polarity at every terminal connection.
+- Use thermocouple probes, extension cable, and installation practices suitable for the required temperature range and accuracy.
+- Validate normal operation and alarm behaviour against a known reference source before relying on the device for operational or protection decisions.
+- Review field wiring, connector, cable routing, grounding, shielding, enclosure, and environmental requirements before installation.
+

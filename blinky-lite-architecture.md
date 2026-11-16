@@ -25,7 +25,7 @@ permalink: /blinky-lite/architecture/
       </a>
 
       <a class="button"
-         href="{{ '/blinky-lite/features/' | relative_url }}">
+        href="{{ '/blinky-lite/' | relative_url }}#features">
         Explore platform features
       </a>
 

@@ -1,6 +1,7 @@
 ---
-title: MAX31865 Cube
+title: Four-terminal resistance thermometry
 description: A wireless, two-channel, precision four-terminal resistance measurement for accurate temperature sensing.
+product-code: max31865-cube
 #repository: https://github.com/bl-instr/MAX31865-cube
 specifications:
   - name: Primary function

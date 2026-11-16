@@ -23,3 +23,5 @@ exclude:
   - Gemfile.lock
   - README.md
   - vendor
+  - runLocal.sh
+  - upload.sh

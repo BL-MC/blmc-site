@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    Water leak detection | BL Monitor and Control AB
+  </title>
+  <link rel="icon" href="/assets/images/project-logo.png" type="image/x-icon">
+
+  <meta
+    name="description"
+    content="A wireless, two-channel,  water leak detection for wide-area coverage in remote equipment spaces, tunnels, basements, and other hard-to-reach locations."
+  >
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container navigation">
+      <a class="brand" href="/">
+        BL Monitor and Control AB
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/blinky-lite/">Blinky-Lite</a>
+        <a href="/products/">Instrumentation</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section">
+  <div class="container product-page">
+    <p>
+      <a href="/products/">← All hardware</a>
+    </p>
+
+    <p class="eyebrow">Blinky-Lite Instrumentation</p>
+    <h1>Water leak detection</h1>
+    <p class="lead">A wireless, two-channel,  water leak detection for wide-area coverage in remote equipment spaces, tunnels, basements, and other hard-to-reach locations.</p>
+
+    
+
+    <div class="actions">
+      <a class="button"
+         href="mailto:info@bl-mc.se?subject=Hardware+enquiry%3A+leak-cube">
+        Email us about this device
+      </a>
+
+      
+      
+    </div>
+
+    
+    <h2>Specifications</h2>
+    <dl class="specifications">
+      <div>
+        <dt>Product Code</dt>
+        <dd>leak-cube</dd>
+      </div>
+      
+      <div>
+        <dt>Primary function</dt>
+        <dd>Resistive water leak detection and detector-integrity monitoring</dd>
+      </div>
+      
+      <div>
+        <dt>Sensor / interface</dt>
+        <dd>Parallel thin stainless-steel wire detector strips embedded in plastic mesh</dd>
+      </div>
+      
+      <div>
+        <dt>Channels</dt>
+        <dd>Two independent leak-detection channels</dd>
+      </div>
+      
+      <div>
+        <dt>Detection principle</dt>
+        <dd>Water bridging parallel detector wires lowers the measured resistance</dd>
+      </div>
+      
+      <div>
+        <dt>Measurement sensitivity</dt>
+        <dd>Impedances on the order of 10 MΩ</dd>
+      </div>
+      
+      <div>
+        <dt>etector coverage</dt>
+        <dd>Detector strips can be many metres long</dd>
+      </div>
+      
+      <div>
+        <dt>Detector integrity</dt>
+        <dd>Open-circuit detection can indicate a damaged or cut wire detector</dd>
+      </div>
+      
+      <div>
+        <dt>Inputs / outputs</dt>
+        <dd>5 mm screw terminals for two-wire detector-strip connections</dd>
+      </div>
+      
+      <div>
+        <dt>Power input</dt>
+        <dd>5 V DC via 2.1 mm barrel connector</dd>
+      </div>
+      
+      <div>
+        <dt>Wireless</dt>
+        <dd>2.4 GHz Wi-Fi</dd>
+      </div>
+      
+      <div>
+        <dt>Communication</dt>
+        <dd>MQTT publish/subscribe protocol</dd>
+      </div>
+      
+      <div>
+        <dt>Controller</dt>
+        <dd>Raspberry Pi Pico W / RP2040</dd>
+      </div>
+      
+      <div>
+        <dt>PCB dimensions</dt>
+        <dd>48 mm × 86 mm</dd>
+      </div>
+      
+      <div>
+        <dt>Enclosure and mounting</dt>
+        <dd>53 mm × 93 mm × 25 mm; DIN Mod3-compatible enclosure with removable DIN-rail mount</dd>
+      </div>
+      
+      <div>
+        <dt>Platform</dt>
+        <dd>Blinky-Lite Instrumentation Platform</dd>
+      </div>
+      
+    </dl>
+    
+
+    <div class="product-content">
+      <table>
+  <thead>
+    <tr>
+      <th>Enclosure</th>
+      <th>PCB</th>
+      <th>Installation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="/assets/images/products/leak-cube/leak-cube.png" alt="leak-cube" width="270" /></td>
+      <td><img src="/assets/images/products/leak-cube/leakPCB.png" alt="leakPCB" width="270" /></td>
+      <td><img src="/assets/images/products/leak-cube/tunnel-install.jpg" alt="tunnel-install" width="270" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="overview">Overview</h2>
+
+<p>The Leak Cube is a compact, wireless instrumentation module in the Blinky-Lite Instrumentation Platform. It is designed to detect water leaks using long, low-cost resistive wire detectors, then communicate leak states and alarms to a central Blinky-Lite control system.</p>
+
+<p>Each detector strip consists of two parallel thin stainless-steel wires embedded in a plastic mesh. When water bridges the wires, the resistance between them drops and the Leak Cube detects a leak. The strips can be many metres long, providing broad coverage along floors, cable routes, tunnels, basements, and other remote locations.</p>
+
+<p>The high-impedance measurement network is sensitive to impedances on the order of 10 MΩ. This enables detection of small conductivity changes while also helping identify an open circuit caused by a damaged or cut detector strip.</p>
+
+<p>Built around the Raspberry Pi Pico W / RP2040, the module uses 2.4 GHz Wi-Fi and MQTT publish/subscribe communication. This event-driven approach supports distributed deployments without wired data connections and enables Blinky-Lite to use device information for recording, notifications, visualisation, and machine-protection workflows.</p>
+
+<h3 id="key-features">Key features</h3>
+
+<ul>
+  <li>Two-channel leak detection: Monitor two independent resistive water-leak detector strips.</li>
+  <li>Wide-area coverage: Low-cost parallel-wire detector strips can extend for many metres to cover long or remote areas.</li>
+  <li>High-impedance measurement: Detect impedances on the order of 10 MΩ for sensitive leak detection.</li>
+  <li>Detector-integrity indication: Identify open-circuit conditions that can indicate a damaged or cut detector strip.</li>
+  <li>Remote deployment: Wireless communication supports placement in out-of-the-way areas such as tunnels and basements.</li>
+  <li>PLC-style field wiring: 5 mm screw terminals simplify connection of detector strips in practical field installations.</li>
+  <li>Event-driven integration: MQTT publish/subscribe communication with Blinky-Lite for prompt leak and detector-fault reporting.</li>
+  <li>Open-source firmware: Microcontroller code can be adapted for site-specific instrumentation and integration requirements.</li>
+</ul>
+
+<h3 id="typical-applications">Typical applications</h3>
+
+<ul>
+  <li>Water-leak monitoring in tunnels and basements</li>
+  <li>Leak detection beneath equipment, piping, and utility installations</li>
+  <li>Remote monitoring of cable routes and service areas</li>
+  <li>Distributed facility monitoring requiring central visibility</li>
+  <li>Leak alarms and machine-protection workflows</li>
+</ul>
+
+<h2 id="getting-started">Getting started</h2>
+
+<h3 id="hardware">Hardware</h3>
+
+<ol>
+  <li>Install the Leak Cube close to the detector strips or area being monitored.</li>
+  <li>Route each parallel-wire detector strip across the area requiring leak coverage.</li>
+  <li>Connect each detector strip to its assigned 5 mm screw terminals according to the product wiring documentation.</li>
+  <li>Connect the cube to a regulated 5 V DC supply through the 2.1 mm barrel connector.</li>
+  <li>Verify the detector-strip condition and confirm that each channel reports normal, leak, and open-circuit states as expected.</li>
+  <li>Mount the enclosure on a DIN rail when required, or remove the DIN-rail mount for an alternative installation.</li>
+</ol>
+
+<h3 id="firmware-build-target">Firmware build target</h3>
+
+<p>The firmware targets the Raspberry Pi Pico W / RP2040 using the Arduino-Pico board support.</p>
+<ul>
+  <li>Board: Pico W / RP2040-compatible target</li>
+  <li>Flash layout: Sketch 1920 KB, filesystem 128 KB</li>
+  <li>FQBN flash option: flash=2097152_131072</li>
+</ul>
+
+<h3 id="open-source-software-and-licensing">Open-source software and licensing</h3>
+
+<p>The firmware is released under the MIT License, giving users broad permission to study, modify, and adapt the code for their own applications. The open hardware design can likewise be customised to suit site-specific requirements. The firmware uses the open-source Arduino-BlinkyPicoW library, which is also available under the MIT License.</p>
+
+<h3 id="configuration">Configuration</h3>
+
+<ol>
+  <li>Build and upload the firmware using the project’s source and configuration files.</li>
+  <li>Use the onboard web interface to set or update Wi-Fi credentials.</li>
+  <li>Configure the MQTT connection and create the corresponding device integration in Blinky-Lite.</li>
+  <li>Set leak and detector-integrity thresholds appropriate to each detector strip and installation environment.</li>
+  <li>Configure alarm thresholds and any required machine-protection or notification workflows.</li>
+  <li>Verify that normal, leak, and detector-fault events appear as expected in Blinky-Lite.</li>
+</ol>
+
+<h3 id="integration-model">Integration model</h3>
+
+<p>The Leak Cube uses MQTT to publish detector states, leak events, and detector-fault events. This event-driven model avoids conventional polling and enables prompt control-system responses to changing conditions.</p>
+
+<p>In a typical deployment, the device connects by Wi-Fi to the network and communicates through an MQTT broker. Blinky-Lite represents it as an integrated instrumentation node and can use its information for recording, display, notification, alarms, and machine-protection logic.</p>
+
+<h3 id="measurement-safety-and-installation-considerations">Measurement, safety, and installation considerations</h3>
+
+<ul>
+  <li>Confirm that detector strips, wiring, connectors, and environmental conditions are suitable for the intended installation.</li>
+  <li>Route detector strips to provide the desired coverage while protecting them from physical damage.</li>
+  <li>Validate normal, leak, and open-circuit behaviour before relying on the device for operational or protection decisions.</li>
+  <li>Set thresholds appropriate to the detector length, installation environment, and required sensitivity.</li>
+  <li>Review connector, cable, grounding, shielding, enclosure, and environmental requirements before installation.</li>
+</ul>
+
+
+    </div>
+
+    <div class="notice">
+      <strong>Planning an installation?</strong>
+      Confirm specifications, operating limits and suitability for your
+      application with us before ordering or relying on a device for
+      protection functions.
+    </div>
+  </div>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <strong>BL Monitor and Control AB</strong>
+        <p>Control software, instrumentation and integration.</p>
+      </div>
+
+      <div>
+        <a href="mailto:info@bl-mc.se">info@bl-mc.se</a>
+        <br>
+        <a href="/blinky-lite/">Blinky-Lite™</a>
+        &nbsp;·&nbsp;
+        <a href="/products/">Instrumentation</a>
+      </div>
+    </div>
+  </footer>
+  <dialog
+  class="video-modal"
+  id="video-modal"
+  aria-labelledby="video-modal-title"
+>
+  <div class="video-modal-header">
+    <h2 id="video-modal-title">Video</h2>
+
+    <button
+      type="button"
+      class="video-modal-close"
+      aria-label="Close video"
+    >
+      &times;
+    </button>
+  </div>
+
+  <div class="video-frame">
+    <iframe
+      id="video-modal-player"
+      title="Blinky-Lite video"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</dialog>
+  <script src="/assets/js/video-modal.js" defer></script>
+</body>
+</html>

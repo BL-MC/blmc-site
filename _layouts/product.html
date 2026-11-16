@@ -12,7 +12,7 @@ layout: default
     <h1>{{ page.title | escape }}</h1>
     <p class="lead">{{ page.description | escape }}</p>
 
-    {% assign email_subject = page.title | prepend: 'Hardware enquiry: ' | url_encode %}
+    {% assign email_subject = page.product-code | prepend: 'Hardware enquiry: ' | url_encode %}
 
     <div class="actions">
       <a class="button"
@@ -32,6 +32,10 @@ layout: default
     {% if page.specifications %}
     <h2>Specifications</h2>
     <dl class="specifications">
+      <div>
+        <dt>Product Code</dt>
+        <dd>{{ page.product-code | escape }}</dd>
+      </div>
       {% for spec in page.specifications %}
       <div>
         <dt>{{ spec.name | escape }}</dt>

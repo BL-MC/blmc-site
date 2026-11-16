@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    Analog signal acquisition | BL Monitor and Control AB
+  </title>
+  <link rel="icon" href="/assets/images/project-logo.png" type="image/x-icon">
+
+  <meta
+    name="description"
+    content="A  wireless, two-channel, high-speed analog acquisition for connecting 0–10 V sensors."
+  >
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container navigation">
+      <a class="brand" href="/">
+        BL Monitor and Control AB
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/blinky-lite/">Blinky-Lite</a>
+        <a href="/products/">Instrumentation</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section">
+  <div class="container product-page">
+    <p>
+      <a href="/products/">← All hardware</a>
+    </p>
+
+    <p class="eyebrow">Blinky-Lite Instrumentation</p>
+    <h1>Analog signal acquisition</h1>
+    <p class="lead">A  wireless, two-channel, high-speed analog acquisition for connecting 0–10 V sensors.</p>
+
+    
+
+    <div class="actions">
+      <a class="button"
+         href="mailto:info@bl-mc.se?subject=Hardware+enquiry%3A+adc-cube">
+        Email us about this device
+      </a>
+
+      
+      
+    </div>
+
+    
+    <h2>Specifications</h2>
+    <dl class="specifications">
+      <div>
+        <dt>Product Code</dt>
+        <dd>adc-cube</dd>
+      </div>
+      
+      <div>
+        <dt>Primary function</dt>
+        <dd>Analog signal acquisition and scaling</dd>
+      </div>
+      
+      <div>
+        <dt>Sensor / interface</dt>
+        <dd>Two 0–10 V analog input channels</dd>
+      </div>
+      
+      <div>
+        <dt>Channels</dt>
+        <dd>Two analog-to-digital converter channels</dd>
+      </div>
+      
+      <div>
+        <dt>Measurement / operating range</dt>
+        <dd>0–10 V per channel</dd>
+      </div>
+      
+      <div>
+        <dt>Resolution</dt>
+        <dd>12 bits; 2.5 mV sensitivity</dd>
+      </div>
+      
+      <div>
+        <dt>Sampling rate</dt>
+        <dd>Over 200 kS/s per channel</dd>
+      </div>
+      
+      <div>
+        <dt>Digital filter bandwidth</dt>
+        <dd>Programmable from 0.1 Hz to 100 kHz per channel</dd>
+      </div>
+      
+      <div>
+        <dt>Inputs / outputs</dt>
+        <dd>Two analog voltage inputs with 5mm screw terminals</dd>
+      </div>
+      
+      <div>
+        <dt>Power input</dt>
+        <dd>5 V DC via 2.1 mm barrel male connector</dd>
+      </div>
+      
+      <div>
+        <dt>Wireless</dt>
+        <dd>2.4 GHz Wi-Fi</dd>
+      </div>
+      
+      <div>
+        <dt>Communication</dt>
+        <dd>MQTT publish/subscribe protocol</dd>
+      </div>
+      
+      <div>
+        <dt>Controller</dt>
+        <dd>Raspberry Pi Pico W / RP2040</dd>
+      </div>
+      
+      <div>
+        <dt>PCB dimensions</dt>
+        <dd>48 mm × 86 mm |</dd>
+      </div>
+      
+      <div>
+        <dt>Enclosure and mounting</dt>
+        <dd>53 mm × 93 mm × 25 mm; DIN Mod3-compatible enclosure with removable DIN-rail mount</dd>
+      </div>
+      
+      <div>
+        <dt>Platform</dt>
+        <dd>Blinky-Lite Instrumentation Platform</dd>
+      </div>
+      
+    </dl>
+    
+
+    <div class="product-content">
+      <table>
+  <thead>
+    <tr>
+      <th>Enclosure</th>
+      <th>PCB</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="/assets/images/products/adc-cube/bl-adc-cube.png" alt="bl-adc-cube" width="400" /></td>
+      <td><img src="/assets/images/products/adc-cube/adcPCB.png" alt="adcPCB" width="400" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="overview">Overview</h2>
+
+<p>The Blinky ADC Cube is a compact, wireless instrumentation module in the Blinky-Lite Instrumentation Platform. It is designed to acquire two 0–10 V analog signals close to the equipment or sensors being monitored, then communicate scaled measurements and alarms to a central Blinky-Lite control system.</p>
+
+<p>Built around the Raspberry Pi Pico W / RP2040, the module uses 2.4 GHz Wi-Fi and MQTT publish/subscribe communication. This event-driven approach supports distributed deployments without wired data connections and enables Blinky-Lite to use device information for recording, notifications, visualisation, and machine-protection workflows.</p>
+
+<h3 id="key-features">Key features</h3>
+
+<ul>
+  <li>Two-channel analog acquisition: Read two independent 0–10 V analog signals.</li>
+  <li>PLC-style field wiring: 5 mm screw terminals make it straightforward to connect analog signals in a PLC-like installation environment.</li>
+  <li>High-speed sampling: Acquire each channel at speeds above 200 kS/s.</li>
+  <li>12-bit resolution: 2.5 mV input sensitivity across the 0–10 V range.</li>
+  <li>Programmable digital filtering: Adjust each channel’s measurement bandwidth from 0.1 Hz to 100 kHz.</li>
+  <li>Engineering-unit scaling: Configure output scaling in Blinky-Lite so sensors can be viewed and used in their natural units.</li>
+  <li>Wireless connectivity: 2.4 GHz Wi-Fi for remote or distributed installations.</li>
+  <li>Event-driven integration: MQTT publish/subscribe communication with Blinky-Lite.</li>
+  <li>Open-source firmware: Microcontroller code can be adapted for site-specific instrumentation and integration requirements.</li>
+</ul>
+
+<h3 id="typical-applications">Typical applications</h3>
+
+<ul>
+  <li>Reading analog sensor outputs in engineering units</li>
+  <li>High-speed monitoring of voltage-based instrumentation signals</li>
+  <li>Accelerator, laboratory, and industrial test systems</li>
+  <li>Distributed sensor installations requiring central visibility and configurable filtering</li>
+  <li>Alarm and machine-protection workflows based on analog process values</li>
+</ul>
+
+<h2 id="getting-started">Getting started</h2>
+
+<h3 id="hardware">Hardware</h3>
+
+<ol>
+  <li>Install the Blinky ADC Cube close to the sensors or analog signals to be monitored.</li>
+  <li>Connect each 0–10 V signal to its assigned 5 mm screw terminal according to the product wiring labels, providing straightforward field wiring in a PLC-like installation environment.</li>
+  <li>Verify that all input voltages remain within the supported 0–10 V range.</li>
+  <li>Power the device from a regulated 5 V DC supply  through the 2.1 mm barrel connector</li>
+  <li>Mount the enclosure on a DIN rail when required, or remove the DIN-rail mount for an alternative installation.</li>
+</ol>
+
+<h3 id="firmware-build-target">Firmware build target</h3>
+
+<p>The firmware targets the Raspberry Pi Pico W / RP2040 using the Arduino-Pico board support.</p>
+<ul>
+  <li>Board: Pico W / RP2040-compatible target</li>
+  <li>Flash layout: Sketch 1920 KB, filesystem 128 KB</li>
+  <li>FQBN flash option: flash=2097152_131072</li>
+</ul>
+
+<h3 id="open-source-software-and-licensing">Open-source software and licensing</h3>
+
+<p>The firmware is released under the MIT License, giving users broad permission to study, modify, and adapt the code for their own applications. The open hardware design can likewise be customized to suit site-specific requirements. The firmware uses the open-source Arduino-BlinkyPicoW library, which is also available under the MIT License.</p>
+
+<h3 id="configuration">Configuration</h3>
+
+<ol>
+  <li>Build and upload the firmware using the project’s source and configuration files.</li>
+  <li>Use the onboard web interface to set or update Wi-Fi credentials.</li>
+  <li>Configure the MQTT connection and create the corresponding device integration in Blinky-Lite.</li>
+  <li>Set channel scaling so each input is reported in the sensor’s required engineering units.</li>
+  <li>Set the digital filter bandwidth, alarm thresholds, and any required operating limits for each channel.</li>
+  <li>Verify that normal measurements and alarm events appear as expected in Blinky-Lite.</li>
+</ol>
+
+<h3 id="integration-model">Integration model</h3>
+
+<p>The Blinky ADC Cube uses MQTT to publish scaled measurements and alarm events. This event-driven model avoids conventional polling and enables prompt control-system responses to changing analog conditions.</p>
+
+<p>In a typical deployment, the device connects by Wi-Fi to the network and communicates through an MQTT broker. Blinky-Lite represents it as an integrated instrumentation node and can use its information for recording, display, notification, alarms, and machine-protection logic.</p>
+
+<h3 id="measurement-safety-and-installation-considerations">Measurement, safety, and installation considerations</h3>
+
+<ul>
+  <li>Confirm that connected sensor outputs, signals, and environmental conditions are within the product’s specified limits.</li>
+  <li>Do not apply voltages outside the supported 0–10 V input range.</li>
+  <li>Apply channel scaling and digital filter bandwidths appropriate to the sensor and required measurement response.</li>
+  <li>Validate normal operation and alarm behavior against a known reference source before relying on the device for operational or protection decisions.</li>
+  <li>Review connector, cable, grounding, shielding, enclosure, and environmental requirements before installation.</li>
+</ul>
+
+    </div>
+
+    <div class="notice">
+      <strong>Planning an installation?</strong>
+      Confirm specifications, operating limits and suitability for your
+      application with us before ordering or relying on a device for
+      protection functions.
+    </div>
+  </div>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <strong>BL Monitor and Control AB</strong>
+        <p>Control software, instrumentation and integration.</p>
+      </div>
+
+      <div>
+        <a href="mailto:info@bl-mc.se">info@bl-mc.se</a>
+        <br>
+        <a href="/blinky-lite/">Blinky-Lite™</a>
+        &nbsp;·&nbsp;
+        <a href="/products/">Instrumentation</a>
+      </div>
+    </div>
+  </footer>
+  <dialog
+  class="video-modal"
+  id="video-modal"
+  aria-labelledby="video-modal-title"
+>
+  <div class="video-modal-header">
+    <h2 id="video-modal-title">Video</h2>
+
+    <button
+      type="button"
+      class="video-modal-close"
+      aria-label="Close video"
+    >
+      &times;
+    </button>
+  </div>
+
+  <div class="video-frame">
+    <iframe
+      id="video-modal-player"
+      title="Blinky-Lite video"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</dialog>
+  <script src="/assets/js/video-modal.js" defer></script>
+</body>
+</html>

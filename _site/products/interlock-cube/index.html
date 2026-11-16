@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    Interlock and digital-status monitoring | BL Monitor and Control AB
+  </title>
+  <link rel="icon" href="/assets/images/project-logo.png" type="image/x-icon">
+
+  <meta
+    name="description"
+    content="A wireless, three-channel, configurable interlock monitoring for reporting switch closures and digital safety states."
+  >
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container navigation">
+      <a class="brand" href="/">
+        BL Monitor and Control AB
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/blinky-lite/">Blinky-Lite</a>
+        <a href="/products/">Instrumentation</a>
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section">
+  <div class="container product-page">
+    <p>
+      <a href="/products/">← All hardware</a>
+    </p>
+
+    <p class="eyebrow">Blinky-Lite Instrumentation</p>
+    <h1>Interlock and digital-status monitoring</h1>
+    <p class="lead">A wireless, three-channel, configurable interlock monitoring for reporting switch closures and digital safety states.</p>
+
+    
+
+    <div class="actions">
+      <a class="button"
+         href="mailto:info@bl-mc.se?subject=Hardware+enquiry%3A+interlock-cube">
+        Email us about this device
+      </a>
+
+      
+      
+    </div>
+
+    
+    <h2>Specifications</h2>
+    <dl class="specifications">
+      <div>
+        <dt>Product Code</dt>
+        <dd>interlock-cube</dd>
+      </div>
+      
+      <div>
+        <dt>Primary function</dt>
+        <dd>Interlock and digital-status monitoring</dd>
+      </div>
+      
+      <div>
+        <dt>Sensor / interface</dt>
+        <dd>Switch closures and compatible digital sensors, including door switches, limit switches, motion detectors, and bimetallic temperature switches</dd>
+      </div>
+      
+      <div>
+        <dt>Channels</dt>
+        <dd>Three independently configurable interlock channels</dd>
+      </div>
+      
+      <div>
+        <dt>Channel source</dt>
+        <dd>ne independently switched 3.3 V source pin per channel</dd>
+      </div>
+      
+      <div>
+        <dt>Digital read input</dt>
+        <dd>One 3.3 V digital read pin per channel</dd>
+      </div>
+      
+      <div>
+        <dt>Input termination</dt>
+        <dd>Remotely configurable pull-up, pull-down, or floating termination per channel</dd>
+      </div>
+      
+      <div>
+        <dt>Logic configuration</dt>
+        <dd>Remotely configurable active-high or active-low logic per channel</dd>
+      </div>
+      
+      <div>
+        <dt>Inputs / outputs</dt>
+        <dd>5 mm screw terminals for field wiring, sensor connections, and 5 V power</dd>
+      </div>
+      
+      <div>
+        <dt>Power input</dt>
+        <dd>5 V DC via 5 mm screw terminals</dd>
+      </div>
+      
+      <div>
+        <dt>Wireless</dt>
+        <dd>2.4 GHz Wi-Fi</dd>
+      </div>
+      
+      <div>
+        <dt>Communication</dt>
+        <dd>MQTT publish/subscribe protocol</dd>
+      </div>
+      
+      <div>
+        <dt>Controller</dt>
+        <dd>Raspberry Pi Pico W / RP2040</dd>
+      </div>
+      
+      <div>
+        <dt>PCB dimensions</dt>
+        <dd>50 mm × 87 mm</dd>
+      </div>
+      
+      <div>
+        <dt>Enclosure and mounting</dt>
+        <dd>55 mm × 93 mm × 26 mm; DIN Mod3-compatible enclosure with removable DIN-rail mount</dd>
+      </div>
+      
+      <div>
+        <dt>Platform</dt>
+        <dd>Blinky-Lite Instrumentation Platform</dd>
+      </div>
+      
+    </dl>
+    
+
+    <div class="product-content">
+      <table>
+  <thead>
+    <tr>
+      <th>Enclosure</th>
+      <th>PCB</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="/assets/images/products/interlock-cube/interlock-cube.png" alt="interlock-cube" width="400" /></td>
+      <td><img src="/assets/images/products/interlock-cube/interlockPCB.png" alt="interlockPCB" width="400" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="overview">Overview</h2>
+
+<p>The Interlock Cube is a compact, wireless instrumentation module in the Blinky-Lite Instrumentation Platform. It is designed to report the status of interlocks and digital sensors near the equipment being monitored, then communicate states and alarms to a central Blinky-Lite control system.</p>
+
+<p>Typical inputs include door switches, limit switches, motion detectors, bimetallic temperature switches, and other dry-contact or compatible digital status signals. Each of the three channels provides independently configurable source, input termination, and active-logic settings so the device can adapt to a wide range of field wiring and sensor arrangements.</p>
+
+<p>Built around the Raspberry Pi Pico W / RP2040, the module uses 2.4 GHz Wi-Fi and MQTT publish/subscribe communication. This event-driven approach supports distributed deployments without wired data connections and enables Blinky-Lite to use device information for recording, notifications, visualisation, and machine-protection or interlock workflows.</p>
+
+<h3 id="key-features">Key features</h3>
+
+<ul>
+  <li>Three configurable interlock channels: Monitor three independent switch closures or compatible digital sensor signals.</li>
+  <li>Independently switched 3.3 V sources: Each channel has a 3.3 V source pin that can be remotely set on or off independently.</li>
+  <li>Flexible input termination: Set each digital read pin remotely and independently to pull-up, pull-down, or floating.</li>
+  <li>Configurable signal logic: Set active-high or active-low logic independently for each sensor input.</li>
+  <li>PLC-style field wiring: 5 mm screw terminals simplify connection of sensors, interlock contacts, and power wiring in PLC-like installations.</li>
+  <li>Event-driven integration: MQTT publish/subscribe communication with Blinky-Lite for prompt reporting of state changes.</li>
+  <li>Wireless connectivity: 2.4 GHz Wi-Fi for remote or distributed installations.</li>
+  <li>Open-source firmware: Microcontroller code can be adapted for site-specific instrumentation and integration requirements.</li>
+</ul>
+
+<h3 id="typical-applications">Typical applications</h3>
+
+<ul>
+  <li>Door and access interlocks</li>
+  <li>Limit-switch and position-status monitoring</li>
+  <li>Motion-detection status reporting</li>
+  <li>Bimetallic temperature-switch monitoring</li>
+  <li>Machine-protection and safety-workflow status inputs</li>
+</ul>
+
+<h2 id="getting-started">Getting started</h2>
+
+<h3 id="hardware">Hardware</h3>
+
+<ol>
+  <li>Install the Interlock Cube close to the switches, sensors, or interlock circuits to be monitored.</li>
+  <li>Connect each sensor or switch circuit to the assigned 5 mm screw terminals according to the product wiring documentation.</li>
+  <li>Connect the regulated 5 V DC supply through the dedicated 5 mm screw terminals.</li>
+  <li>Verify that the connected devices and wiring are compatible with the 3.3 V source and digital-read arrangements used for each channel.</li>
+  <li>Mount the enclosure on a DIN rail when required, or remove the DIN-rail mount for an alternative installation.</li>
+</ol>
+
+<h3 id="firmware-build-target">Firmware build target</h3>
+
+<p>The firmware targets the Raspberry Pi Pico W / RP2040 using the Arduino-Pico board support.</p>
+<ul>
+  <li>Board: Pico W / RP2040-compatible target</li>
+  <li>Flash layout: Sketch 1920 KB, filesystem 128 KB</li>
+  <li>FQBN flash option: flash=2097152_131072</li>
+</ul>
+
+<h3 id="open-source-software-and-licensing">Open-source software and licensing</h3>
+
+<p>The firmware is released under the MIT License, giving users broad permission to study, modify, and adapt the code for their own applications. The open hardware design can likewise be customised to suit site-specific requirements. The firmware uses the open-source Arduino-BlinkyPicoW library, which is also available under the MIT License.</p>
+
+<h3 id="configuration">Configuration</h3>
+
+<ol>
+  <li>Build and upload the firmware using the project’s source and configuration files.</li>
+  <li>Use the onboard web interface to set or update Wi-Fi credentials.</li>
+  <li>Configure the MQTT connection and create the corresponding device integration in Blinky-Lite.</li>
+  <li>For each channel, set the 3.3 V source pin on or off as required by the connected field device.</li>
+  <li>For each channel, set the digital-read termination to pull-up, pull-down, or floating.</li>
+  <li>Set active-high or active-low logic independently for each sensor input.</li>
+  <li>Verify that normal states, transitions, and alarm events appear as expected in Blinky-Lite.</li>
+</ol>
+
+<h3 id="integration-model">Integration model</h3>
+
+<p>The Interlock Cube uses MQTT to publish sensor states and state-change events. This event-driven model avoids conventional polling and enables prompt control-system responses to changing interlock conditions.</p>
+
+<p>In a typical deployment, the device connects by Wi-Fi to the network and communicates through an MQTT broker. Blinky-Lite represents it as an integrated instrumentation node and can use its information for recording, display, notification, alarms, and machine-protection logic.</p>
+
+<h3 id="measurement-safety-and-installation-considerations">Measurement, safety, and installation considerations</h3>
+
+<ul>
+  <li>Confirm that connected switches, sensors, circuits, and environmental conditions are within the product’s specified limits.</li>
+  <li>Verify the required 3.3 V source setting, input termination, and active logic for every channel before operation.</li>
+  <li>Validate normal operation and interlock-state behaviour before relying on the device for operational or protection decisions.</li>
+  <li>Review field wiring, connector, cable, grounding, shielding, enclosure, and environmental requirements before installation.</li>
+  <li>Assess the overall safety function and any required fault handling for the intended application; this module reports interlock status but does not replace a safety assessment of the complete system.</li>
+</ul>
+
+    </div>
+
+    <div class="notice">
+      <strong>Planning an installation?</strong>
+      Confirm specifications, operating limits and suitability for your
+      application with us before ordering or relying on a device for
+      protection functions.
+    </div>
+  </div>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <strong>BL Monitor and Control AB</strong>
+        <p>Control software, instrumentation and integration.</p>
+      </div>
+
+      <div>
+        <a href="mailto:info@bl-mc.se">info@bl-mc.se</a>
+        <br>
+        <a href="/blinky-lite/">Blinky-Lite™</a>
+        &nbsp;·&nbsp;
+        <a href="/products/">Instrumentation</a>
+      </div>
+    </div>
+  </footer>
+  <dialog
+  class="video-modal"
+  id="video-modal"
+  aria-labelledby="video-modal-title"
+>
+  <div class="video-modal-header">
+    <h2 id="video-modal-title">Video</h2>
+
+    <button
+      type="button"
+      class="video-modal-close"
+      aria-label="Close video"
+    >
+      &times;
+    </button>
+  </div>
+
+  <div class="video-frame">
+    <iframe
+      id="video-modal-player"
+      title="Blinky-Lite video"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</dialog>
+  <script src="/assets/js/video-modal.js" defer></script>
+</body>
+</html>
