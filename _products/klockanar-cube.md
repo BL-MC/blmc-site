@@ -1,5 +1,5 @@
 ---
-title: Configurable 48-LED light ring!
+title: Configurable 48-LED light ring
 card-order: 9
 description: A configurable 48-LED light ring for engineers who want a fun, wireless Blinky-Lite project.
 #repository: https://github.com/bl-instr/klockanar-cube
