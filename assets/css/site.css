@@ -644,3 +644,29 @@
     border-top: 1px solid #42535d;
   }
 }
+/* About page team photos */
+
+.team-photo-placeholder,
+.team-photo {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  aspect-ratio: 1;
+  margin-bottom: 1.25rem;
+  border-radius: 12px;
+}
+
+.team-photo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  background: #e6ecee;
+  color: #42535d;
+  text-align: center;
+}
+
+.team-photo {
+  object-fit: cover;
+}
